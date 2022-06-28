@@ -1,0 +1,3 @@
+NOT bug
+deconstructors bug
+weird %%% things printing in weird spots 

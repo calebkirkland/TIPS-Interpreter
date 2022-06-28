@@ -1,0 +1,54 @@
+INFO: Using the error2.pas file for input
+enter <program>
+    -->found PROGRAM
+    -->found BADPROG
+    -->found ;
+    enter <block>
+        enter <compound_statement>
+            -->found BEGIN
+            enter <statement>
+                enter <if statement>
+                    -->found IF
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 3
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                        -->found <
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 4.5
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                    -->found THEN
+                    enter <statement>
+                        enter <write>
+                            -->found WRITE
+                            -->found (
+                            -->found 'YES IT IS'
+                            -->found )
+                        exit <write>
+                    exit <statement>
+                    -->found ELSE
+                    enter <statement>
+                        enter <write>
+                            -->found WRITE
+                            -->found (
+                            -->found 'NOPE'
+                            -->found )
+                        exit <write>
+                    exit <statement>
+                exit <if statement>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <assignment>
+
+***ERROR:
+On line number 9, near QWERTY, error type 104: identifier not declared

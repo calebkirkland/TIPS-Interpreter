@@ -1,0 +1,247 @@
+INFO: Using the while_sample.pas file for input
+enter <program>
+    -->found PROGRAM
+    -->found LOOPEX
+    -->found ;
+    enter <block>
+        -->found VAR
+        -->found COUNT
+        -->found :
+        -->found INTEGER
+        -->found ;
+
+        -->found MULTIPLE
+        -->found :
+        -->found INTEGER
+        -->found ;
+
+        -->found BASE
+        -->found :
+        -->found INTEGER
+        -->found ;
+
+        enter <compound_statement>
+            -->found BEGIN
+            enter <statement>
+                enter <assignment>
+                    -->found COUNT
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 1
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <assignment>
+                    -->found MULTIPLE
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 0
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found 'ENTER THE BASE INTEGER'
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <read>
+                    -->found READ
+                    -->found (
+                    -->found BASE
+                    -->found )
+                exit <read>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found 'MULTIPLES'
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <while statement>
+                    -->found WHILE
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found COUNT
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                        -->found <
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 12
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                    enter <statement>
+                        enter <compound_statement>
+                            -->found BEGIN
+                            enter <statement>
+                                enter <assignment>
+                                    -->found MULTIPLE
+                                    -->found :=
+                                    enter <expression>
+                                        enter <simple expression>
+                                            enter <term>
+                                                enter <factor>
+                                                    -->found COUNT
+                                                exit <factor>
+                                                -->found *
+                                                enter <factor>
+                                                    -->found BASE
+                                                exit <factor>
+                                            exit <term>
+                                        exit <simple expression>
+                                    exit <expression>
+                                exit <assignment>
+                            exit <statement>
+                            -->found ;
+                            enter <statement>
+                                enter <write>
+                                    -->found WRITE
+                                    -->found (
+                                    -->found MULTIPLE
+                                    -->found )
+                                exit <write>
+                            exit <statement>
+                            -->found ;
+                            enter <statement>
+                                enter <assignment>
+                                    -->found COUNT
+                                    -->found :=
+                                    enter <expression>
+                                        enter <simple expression>
+                                            enter <term>
+                                                enter <factor>
+                                                    -->found COUNT
+                                                exit <factor>
+                                            exit <term>
+                                            -->found +
+                                            enter <term>
+                                                enter <factor>
+                                                    -->found 1
+                                                exit <factor>
+                                            exit <term>
+                                        exit <simple expression>
+                                    exit <expression>
+                                exit <assignment>
+                            exit <statement>
+                            -->found END
+                        exit <compound_statement>
+                    exit <statement>
+                exit <while statement>
+            exit <statement>
+            -->found END
+        exit <compound_statement>
+    exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+User Defined Symbols:
+BASE
+COUNT
+MULTIPLE
+
+*** In order traversal of parse tree ***
+Program Name LOOPEX
+Begin Compound Statement
+Assignment COUNT := expression( simple_expression( term( factor( 1 ) ) ) )
+Assignment MULTIPLE := expression( simple_expression( term( factor( 0 ) ) ) )
+Write String 'ENTER THE BASE INTEGER'
+Read Value BASE
+Write String 'MULTIPLES'
+While expression( simple_expression( term( factor( COUNT ) ) ) < simple_expression( term( factor( 12 ) ) ) )
+%%%%%%%% Loop Body %%%%%%%%
+Begin Compound Statement
+Assignment MULTIPLE := expression( simple_expression( term( factor( COUNT ) * factor( BASE ) ) ) )
+Write Value MULTIPLE
+Assignment COUNT := expression( simple_expression( term( factor( COUNT ) ) + term( factor( 1 ) ) ) )
+End Compound Statement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+End Compound Statement
+
+
+*** Interpreting the TIPS program ***
+ENTER THE BASE INTEGER
+MULTIPLES
+-11
+-22
+-33
+-44
+-55
+-66
+-77
+-88
+-99
+-110
+-121
+
+*** Delete the parse tree ***
+Deleting a programNode
+Deleting a blockNode
+Deleting a compoundNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a writeNode
+Deleting a readNode
+Deleting a writeNode
+Deleting a whileNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a compoundNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting a writeNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a termNode
+Deleting a factorNode

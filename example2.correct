@@ -1,0 +1,189 @@
+INFO: Using the example2.pas file for input
+enter <program>
+    -->found PROGRAM
+    -->found EXAMPLE2
+    -->found ;
+    enter <block>
+        -->found VAR
+        -->found HEIGHT
+        -->found :
+        -->found INTEGER
+        -->found ;
+
+        -->found WIDTH
+        -->found :
+        -->found INTEGER
+        -->found ;
+
+        -->found AREA
+        -->found :
+        -->found INTEGER
+        -->found ;
+
+        enter <compound_statement>
+            -->found BEGIN
+            enter <statement>
+                enter <assignment>
+                    -->found HEIGHT
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 5
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <assignment>
+                    -->found WIDTH
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 4
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <assignment>
+                    -->found AREA
+                    -->found :=
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found HEIGHT
+                                exit <factor>
+                                -->found *
+                                enter <factor>
+                                    -->found WIDTH
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                exit <assignment>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <write>
+                    -->found WRITE
+                    -->found (
+                    -->found AREA
+                    -->found )
+                exit <write>
+            exit <statement>
+            -->found ;
+            enter <statement>
+                enter <if statement>
+                    -->found IF
+                    enter <expression>
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found AREA
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                        -->found >
+                        enter <simple expression>
+                            enter <term>
+                                enter <factor>
+                                    -->found 1000
+                                exit <factor>
+                            exit <term>
+                        exit <simple expression>
+                    exit <expression>
+                    -->found THEN
+                    enter <statement>
+                        enter <write>
+                            -->found WRITE
+                            -->found (
+                            -->found 'THAT IS LARGE'
+                            -->found )
+                        exit <write>
+                    exit <statement>
+                    -->found ELSE
+                    enter <statement>
+                        enter <write>
+                            -->found WRITE
+                            -->found (
+                            -->found 'THAT IS SMALL'
+                            -->found )
+                        exit <write>
+                    exit <statement>
+                exit <if statement>
+            exit <statement>
+            -->found END
+        exit <compound_statement>
+    exit <block>
+exit <program>
+
+=== GO BULLDOGS! Your parse was successful! ===
+
+User Defined Symbols:
+AREA
+HEIGHT
+WIDTH
+
+*** In order traversal of parse tree ***
+Program Name EXAMPLE2
+Begin Compound Statement
+Assignment HEIGHT := expression( simple_expression( term( factor( 5 ) ) ) )
+Assignment WIDTH := expression( simple_expression( term( factor( 4 ) ) ) )
+Assignment AREA := expression( simple_expression( term( factor( HEIGHT ) * factor( WIDTH ) ) ) )
+Write Value AREA
+If expression( simple_expression( term( factor( AREA ) ) ) > simple_expression( term( factor( 1000 ) ) ) )
+%%%%%%%% True Statement %%%%%%%%
+Write String 'THAT IS LARGE'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% False Statement %%%%%%%%
+Write String 'THAT IS SMALL'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+End Compound Statement
+
+
+*** Interpreting the TIPS program ***
+20
+THAT IS SMALL
+
+*** Delete the parse tree ***
+Deleting a programNode
+Deleting a blockNode
+Deleting a compoundNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting an assignmentNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a factorNode
+Deleting a writeNode
+Deleting an ifNode
+Deleting an expressionNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a simpleExpressionNode
+Deleting a termNode
+Deleting a factorNode
+Deleting a writeNode
+Deleting a writeNode
